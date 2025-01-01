@@ -1,39 +1,51 @@
 import React, { useState } from "react";
 
 function App() {
-  const [on, setOn] = useState("white");
+  const [output, setOutput] = useState(0);
 
-  const handleMode = (e) => {
-    e.preventDefault();
-    if (on != "dark") {
-      setOn("dark");
+  const array = [
+    "light",
+    "dark",
+    "cupcake",
+    "emerald",
+    "retro",
+    "cyberpunk",
+    "lofi",
+    "pastel",
+  ];
+
+  const changeOutput = () => {
+    let counter = array.length;
+    if (output < counter - 1) {
+      setOutput(output + 1);
     } else {
-      setOn("white");
+      setOutput(0);
     }
   };
 
+  console.log(array[output]);
+
   return (
-    <div className={on}>
-      <div class="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
-        <div>
-          <span class="inline-flex items-center justify-center p-2 rounded-md shadow-lg">
-            <button
-              onClick={handleMode}
-              class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
-            >
-              <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                Mode: {on}
-              </span>
+    <div>
+      <div className="hero bg-base-200 min-h-screen" data-theme={array[output]}>
+        <div className="hero-content text-center flex-col">
+          <div className="max-w-md">
+            <h1 className="text-5xl font-bold">Hello there</h1>
+            <p className="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <button className="btn btn-primary" onClick={changeOutput}>
+              Theme
             </button>
-          </span>
+          </div>
+          <div className="stats shadow">
+            <div className="stat">
+              <div className="stat-value">{array[output]}</div>
+            </div>
+          </div>
         </div>
-        <h3 class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">
-          Writes Upside-Down
-        </h3>
-        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-          The Zero Gravity Pen can be used to write in any orientation,
-          including upside-down. It even works in outer space.
-        </p>
       </div>
     </div>
   );
