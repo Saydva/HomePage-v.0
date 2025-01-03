@@ -1,9 +1,12 @@
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
 import React, { useState } from "react";
+import Color from "./components/colors";
+import Footer from "./components/footer";
+import Content from "./components/content";
 
 function App() {
-  const [output, setOutput] = useState(0);
+  const [output, setOutput] = useState(3);
 
   const changeTheme = () => {
     let counter = array.length;
@@ -25,11 +28,13 @@ function App() {
     "pastel",
   ];
 
-  console.log();
   return (
     <div data-theme={array[output]}>
       <Navbar changeTheme={changeTheme} themeName={array[output]} />
       <Hero />
+      <Color />
+      <Content />
+      <Footer />
     </div>
   );
 }

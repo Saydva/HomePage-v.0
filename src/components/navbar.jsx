@@ -5,10 +5,12 @@ function Navbar(props) {
   const themeName = props.themeName;
   return (
     <div className="flex justify-between max-sm:flex-wrap max-sm:justify-end ">
-      <div className="navbar bg-base-100">
-        <a className="btn btn-ghost text-xl">Home</a>
-        <a className="btn btn-ghost text-xl">Projects</a>
-        <a className="btn btn-ghost text-xl">About</a>
+      <div className="navbar bg-base-100 gap-x-2">
+        <a href="/" className="btn btn-ghost text-xl">
+          Domov
+        </a>
+        <a className="btn btn-ghost text-xl">Responzívny web</a>
+        <a className="btn btn-ghost text-xl">O mne</a>
       </div>
       <div className="flex items-center gap-6">
         <div className="stat-value text-lg">{themeName}</div>
