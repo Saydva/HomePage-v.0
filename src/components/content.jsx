@@ -40,15 +40,15 @@ function Content() {
             </p>
           </div>
         </div>
-        <div className="card bg-neutral text-neutral-content w-96">
-          <div className="card-body items-center text-center">
-            <h2 className="card-title"> Redizajn</h2>
-            <p>
-              {" "}
-              Kľudne mi napíšte aké sú vaše predstavy,čo zmeniť alebo doplniť a
-              pozrieme sa spolu na to! <br /> od 99 €
-            </p>
-          </div>
+      </div>
+      <div className="card bg-neutral text-neutral-content w-96">
+        <div className="card-body items-center text-center">
+          <h2 className="card-title"> Redizajn</h2>
+          <p>
+            {" "}
+            Kľudne mi napíšte aké sú vaše predstavy,čo zmeniť alebo doplniť a
+            pozrieme sa spolu na to! <br /> od 99 €
+          </p>
         </div>
       </div>
     </div>

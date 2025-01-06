@@ -6,11 +6,11 @@ function Navbar(props) {
   return (
     <div className="flex justify-between max-sm:flex-wrap max-sm:justify-end ">
       <div className="navbar bg-base-100 gap-x-2">
-        <a href="/" className="btn btn-ghost text-xl">
+        <a href="/" className="btn btn-ghost text-xl max-sm:text-sm">
           Domov
         </a>
-        <a className="btn btn-ghost text-xl">Responzívny web</a>
-        <a className="btn btn-ghost text-xl">O mne</a>
+        <a className="btn btn-ghost text-xl max-sm:text-sm">Responzívny web</a>
+        <a className="btn btn-ghost text-xl max-sm:text-sm">O mne</a>
       </div>
       <div className="flex items-center gap-6 mx-3">
         <div className="stat-value text-lg">Téma</div>
