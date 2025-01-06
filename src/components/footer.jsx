@@ -7,7 +7,7 @@ function Footer() {
         <h6 className="footer-title m-0">Kontakty:</h6>
         {/* Open the modal using document.getElementById('ID').showModal() method */}
         <button
-          className="btn-neutral border border-ghost p-2 rounded-md"
+          className="btn-neutral border border-ghost p-2 rounded-md "
           onClick={() => document.getElementById("my_modal_1").showModal()}
         >
           Mobil

@@ -6,7 +6,7 @@ import Footer from "./components/footer";
 import Content from "./components/content";
 
 function App() {
-  const [output, setOutput] = useState(3);
+  const [output, setOutput] = useState(0);
 
   const changeTheme = () => {
     let counter = array.length;
@@ -17,16 +17,7 @@ function App() {
     }
   };
 
-  const array = [
-    "light",
-    "dark",
-    "cupcake",
-    "emerald",
-    "retro",
-    "cyberpunk",
-    "lofi",
-    "pastel",
-  ];
+  const array = ["nord", "night"];
 
   return (
     <div data-theme={array[output]}>
