@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion, useScroll } from "motion/react";
 
 function Navbar(props) {
   const changeTheme = props.changeTheme;
+  const [move, setMove] = useState(false);
 
-  const button = document.querySelectorAll(".test");
-  function click() {
-    button.classlist.add("animate-jump");
-  }
   return (
     <div className="flex justify-between max-sm:flex-wrap max-sm:justify-end">
       <div className="navbar bg-base-100 gap-x-2 ">
