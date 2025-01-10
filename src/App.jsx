@@ -17,14 +17,21 @@ function App() {
     }
   };
 
+  var opacity;
+
   const array = ["nord", "night"];
+  if (array[output] == "nord") {
+    opacity = true;
+  } else {
+    opacity = false;
+  }
 
   return (
     <div data-theme={array[output]}>
       <Navbar changeTheme={changeTheme} themeName={array[output]} />
-      <Hero />
-      <Color />
-      <Content />
+      <Hero opacity={opacity} />
+      {/* <Color /> */}
+      <Content opacity={opacity} />
       <Footer />
     </div>
   );

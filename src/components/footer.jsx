@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="footer bg-neutral text-neutral-content p-10 max-md:justify-center rounded-lg">
+    <footer className="footer bg-neutral text-neutral-content p-10 max-md:justify-center rounded-t-lg">
       <nav className=" flex w-full px-10 max-md:flex-col justify-center gap-8 items-center">
         <h6 className="footer-title m-0">Kontakty:</h6>
         {/* Open the modal using document.getElementById('ID').showModal() method */}

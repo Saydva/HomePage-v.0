@@ -2,10 +2,14 @@ import React from "react";
 
 function Navbar(props) {
   const changeTheme = props.changeTheme;
-  const themeName = props.themeName;
+
+  const button = document.querySelectorAll(".test");
+  function click() {
+    button.classlist.add("animate-jump");
+  }
   return (
-    <div className="flex justify-between max-sm:flex-wrap max-sm:justify-end ">
-      <div className="navbar bg-base-100 gap-x-2">
+    <div className="flex justify-between max-sm:flex-wrap max-sm:justify-end">
+      <div className="navbar bg-base-100 gap-x-2 ">
         <a href="/" className="btn btn-ghost text-xl max-sm:text-sm">
           Domov
         </a>
