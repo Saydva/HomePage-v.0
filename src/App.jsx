@@ -1,12 +1,19 @@
-import Hero from "./components/hero";
-import Navbar from "./components/navbar";
+import { Routes, Route } from "react-router";
 import React, { useState } from "react";
-import Color from "./components/colors";
-import Footer from "./components/footer";
-import Content from "./components/content";
+
+import Home from "./components/pages/homePage";
+import O_mne from "./components/pages/o_mne";
+import Navbar from "./components/pageComponents/navbar";
+import Responzívny_web from "./components/pages/responzivny_web";
 
 function App() {
   const [output, setOutput] = useState(0);
+
+  const effect = ({ target }) => {
+    target.classList.remove("animate-fade");
+    target.classList.add("animate-fade");
+    // ;
+  };
 
   const changeTheme = () => {
     let counter = array.length;
@@ -25,15 +32,17 @@ function App() {
   } else {
     opacity = false;
   }
-
   return (
-    <div data-theme={array[output]}>
-      <Navbar changeTheme={changeTheme} themeName={array[output]} />
-      <Hero opacity={opacity} />
-      {/* <Color /> */}
-      <Content opacity={opacity} />
-      <Footer />
-    </div>
+    <>
+      <div data-theme={array[output]} className="bg-none">
+        <Navbar changeTheme={changeTheme} effect={effect} />
+        <Routes>
+          <Route path="/" element={<Home opacity={opacity} />} />
+          <Route path="/Responzívny_web" element={<Responzívny_web />} />
+          <Route path="/O_mne" element={<O_mne />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
