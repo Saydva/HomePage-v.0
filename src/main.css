@@ -10,3 +10,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.my-custom-style {
+  background-color: "gradient-to-br from-[#f43f5e] via-[#be185d] to-[#831843]"
+}
