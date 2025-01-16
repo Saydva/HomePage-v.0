@@ -2,7 +2,7 @@ import React from "react";
 
 function Color() {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-2 py-5">
+    <div className="flex flex-row flex-wrap justify-center gap-2 py-5 max-w-7xl mx-auto">
       <button className="btn btn-primary">Primary</button>
       <button className="btn btn-primary-content">primary-content</button>
       <button className="btn btn-secondary">secondary</button>
