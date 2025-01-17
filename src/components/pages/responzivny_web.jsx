@@ -10,7 +10,7 @@ function Responzívny_web() {
     p2: "Prvé čo potrebuje moja stránka je obsah (aký, taký tu už máme)",
     p3: "Layount --- Potrebujeme layout, tj. rozložení prvkov na stránke pri navrhovaní stránok. Architektúra stánky.",
     button4: "Layout",
-    p4: "Naša stránka má layout jej elementy sú na mieste, skúsme jej pridať trochu štýlu a aj footer - pätička webu",
+    p4: "Naša stránka má layout jej elementy sú na mieste, skúsme jej pridať trochu štýlu, footer - pätičku webu, a zopar animácií",
   });
 
   const [pageCss, setPageCss] = useState({
@@ -26,10 +26,17 @@ function Responzívny_web() {
     p3: "p-14 m-3",
     button4: "",
     p4: " p-3 hidden",
-    empty() {
-      return "";
-    },
   });
+
+  function empty() {
+    return "";
+  }
+
+  function objValues(obj) {
+    return Object.values(obj);
+  }
+
+  console.log(objValues(pageCss));
 
   return (
     <div className=" max-w-7xl mx-auto flex justify-center  ">
@@ -60,7 +67,7 @@ function Responzívny_web() {
             <p className={`${pageCss.p2}`}>{`${pageContent.p2}`}</p>
             <br />
             <p className={`${pageCss.p3}`}>{`${pageContent.p3}`}</p>
-            <div className="animate-bounce w-6 h-6">
+            <div className="animate-bounce w-6 h-6 fill-infoa">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <g data-name="15.Arrow Down">
                   <path d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z" />
