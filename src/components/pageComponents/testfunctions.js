@@ -1,19 +1,35 @@
-const arr = [
-  [
-    "flex justify:center",
-    "flex items-center flex-col  self-start",
-    "flex flex-row px-6 border-slate-200 ",
-    "flex justify-center items-center",
-    "p-3",
-    "p-3",
-    "p-3",
-    "px-14 m-3",
-    "py-8",
-    "p-14 m-3",
-    "",
-    " p-3 hidden",
-  ],
+// const arr = [
+//   "flex justify:center",
+//   "flex items-center flex-col  self-start",
+//   "flex flex-row px-6 border-slate-200 ",
+//   "flex justify-center items-center",
+//   "p-3",
+//   "p-3",
+//   "p-3",
+//   "px-14 m-3",
+//   "py-8",
+//   "p-14 m-3",
+//   "",
+//   " p-3 hidden",
+// ];
+// splite arr into arr of subarrs with elements to set them as obj kye value pairs
+// const splitArr = arr.map((element) => newArr.push([element]));
+
+const layoutArr = [
+  ["flex justify:center"],
+  ["flex items-center flex-col  self-start"],
+  ["flex flex-row px-6 border-slate-200 "],
+  ["flex justify-center items-center"],
+  ["p-3"],
+  ["p-3"],
+  ["p-3"],
+  ["px-14 m-3"],
+  ["py-8"],
+  ["p-14 m-3"],
+  [""],
+  [" p-3 hidden"],
 ];
+// console.log(newArr);
 
 const obj = {
   div1: "flex justify:center",
@@ -30,11 +46,10 @@ const obj = {
   p4: " p-3 hidden",
 };
 
-const empty = () => {
-  return "";
-};
-
 function set(object) {
+  const empty = () => {
+    return "";
+  };
   var newobj = {};
   for (let value in object) {
     newobj[value] = empty();
@@ -42,17 +57,18 @@ function set(object) {
   return newobj;
 }
 
-var myobj = set(obj);
-console.log(myobj);
+var emptyObj = set(obj);
+// console.log(emptyObj);
 
-function setback(arr, obj) {
-  let backobj = obj;
-  for (let i = 0; i > arr.length; i++) {
-    for (let value in backobj) {
-      backobj[value] = [i];
-    }
-  }
-  return backobj;
-}
+const setLauot = (obj) => {
+  let modiObj = obj;
+  Object.keys(modiObj).forEach((key, index) => {
+    modiObj[key] = layoutArr[index][0];
+  });
+  return modiObj;
+};
 
-setback(arr, myobj);
+console.log(setLauot(emptyObj));
+
+console.log(emptyObj);
+// console.log(obj);

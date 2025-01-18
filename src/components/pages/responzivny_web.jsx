@@ -28,15 +28,9 @@ function Responzívny_web() {
     p4: " p-3 hidden",
   });
 
-  function empty() {
-    return "";
-  }
-
-  function objValues(obj) {
-    return Object.values(obj);
-  }
-
-  console.log(objValues(pageCss));
+  const cahngeObj = () => {
+    console.log("hello");
+  };
 
   return (
     <div className=" max-w-7xl mx-auto flex justify-center  ">
@@ -76,7 +70,10 @@ function Responzívny_web() {
                 </g>
               </svg>
             </div>
-            <button className="btn m-3 w-24">{`${pageContent.button4}`}</button>
+            <button
+              className="btn m-3 w-24"
+              onClick={cahngeObj}
+            >{`${pageContent.button4}`}</button>
             <p className={`${pageCss.p4}`}>{`${pageContent.p4}`}</p>
           </div>
         </div>
