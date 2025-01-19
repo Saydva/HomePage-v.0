@@ -107,6 +107,8 @@ function Responzívny_web() {
     setLayout(!layout);
     if (layout == false) {
       setPageCss(erase(pageCss, elementsLayout));
+      setHiddenDiv(eraseHiddenDiv(hiddenDiv, elementsHidenDiv));
+      responziveRemoveContent();
     } else if (layout == true) {
       setPageCss(fill(pageCss, layoutArr));
     }
@@ -134,7 +136,7 @@ function Responzívny_web() {
       " text-lg motion-preset-stretch motion-loop-twice border-slate-100 border-2 shadow-primary shadow-xl rounded-lg hover:motion-preset-oscillate motion-loop-once ",
     ];
     pageCss.p4 += [
-      " p-4 rounded-md border-slate-100 motion-preset-wobble motion-loop-twice hover:motion-preset-blur-right ",
+      " p-4 motion-preset-wobble motion-loop-twice hover:motion-preset-blur-right ",
     ];
     pageCss.button4 += [
       " motion-translate-x-in-[-100%] motion-translate-y-in-[0%] motion-opacity-in-[0%] ",
@@ -172,7 +174,7 @@ function Responzívny_web() {
       ""
     );
     pageCss.p4 = pageCss.p4.replace(
-      " p-4 rounded-md border-slate-100 motion-preset-wobble motion-loop-twice hover:motion-preset-blur-right ",
+      " p-4 motion-preset-wobble motion-loop-twice hover:motion-preset-blur-right ",
       ""
     );
     pageCss.button4 = pageCss.button4.replace(
