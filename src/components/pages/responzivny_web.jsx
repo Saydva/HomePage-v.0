@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function Responzívny_web() {
+  const [layout, setLayout] = useState(false);
   const [pageContent, setPageContent] = useState({
     p: "Moja navigácia",
     button1: "Tačidlo1",
@@ -25,12 +26,57 @@ function Responzívny_web() {
     p2: "py-8",
     p3: "p-14 m-3",
     button4: "",
-    p4: " p-3 hidden",
+    p4: " p-3",
   });
 
-  const cahngeObj = () => {
-    console.log("hello");
+  const layoutArr = [
+    ["flex justify:center"],
+    ["flex items-center flex-col  self-start"],
+    ["flex flex-row px-6 border-slate-200 "],
+    ["flex justify-center items-center"],
+    ["p-3"],
+    ["p-3"],
+    ["p-3"],
+    ["px-14 m-3"],
+    ["py-8"],
+    ["p-14 m-3"],
+    [""],
+    [" p-3"],
+  ];
+
+  function erase(object) {
+    const empty = () => {
+      return "";
+    };
+    var newobj = {};
+    for (let value in object) {
+      newobj[value] = empty();
+    }
+    return newobj;
+  }
+
+  const fill = (obj) => {
+    let modiObj = obj;
+    Object.keys(modiObj).forEach((key, index) => {
+      modiObj[key] = layoutArr[index][0];
+    });
+    return modiObj;
   };
+
+  //handle boolean
+  const changeLayout = () => {
+    setLayout(!layout);
+
+    if (layout == false) {
+      //clone
+      setPageCss(erase(pageCss));
+    } else if (layout == true) {
+      setPageCss(fill(pageCss));
+    }
+  };
+  console.log(pageCss);
+
+  console.log(layout);
 
   return (
     <div className=" max-w-7xl mx-auto flex justify-center  ">
@@ -72,7 +118,7 @@ function Responzívny_web() {
             </div>
             <button
               className="btn m-3 w-24"
-              onClick={cahngeObj}
+              onClick={changeLayout}
             >{`${pageContent.button4}`}</button>
             <p className={`${pageCss.p4}`}>{`${pageContent.p4}`}</p>
           </div>

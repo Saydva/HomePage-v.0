@@ -46,7 +46,22 @@ const obj = {
   p4: " p-3 hidden",
 };
 
-function set(object) {
+const clone = {
+  div1: "",
+  div2: "",
+  nav: "",
+  p: "",
+  button1: "",
+  button2: "",
+  button3: "",
+  p1: "",
+  p2: "",
+  p3: "",
+  button4: "",
+  p4: "",
+};
+
+function erase(object) {
   const empty = () => {
     return "";
   };
@@ -56,9 +71,6 @@ function set(object) {
   }
   return newobj;
 }
-
-var emptyObj = set(obj);
-// console.log(emptyObj);
 
 const setLauot = (obj) => {
   let modiObj = obj;
@@ -70,5 +82,5 @@ const setLauot = (obj) => {
 
 console.log(setLauot(emptyObj));
 
-console.log(emptyObj);
+console.log(erase(emptyObj));
 // console.log(obj);
