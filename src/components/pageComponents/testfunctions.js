@@ -15,6 +15,22 @@
 // splite arr into arr of subarrs with elements to set them as obj kye value pairs
 // const splitArr = arr.map((element) => newArr.push([element]));
 
+const pageCss = {
+  div1: "",
+  div2: "",
+  nav: "",
+  p: "",
+  button1: "",
+  button2: "",
+  button3: "",
+  p1: "",
+  p2: "",
+  p3: "",
+  button4: "",
+  p4: "",
+  button5: "",
+};
+
 const layoutArr = [
   ["flex justify:center"],
   ["flex items-center flex-col  self-start"],
@@ -27,49 +43,34 @@ const layoutArr = [
   ["py-8"],
   ["p-14 m-3"],
   [""],
-  [" p-3 hidden"],
+  [" p-3"],
+  ["btn m-3 w-24 "],
 ];
-// console.log(newArr);
+const elements = [" p4"];
 
-const obj = {
-  div1: "flex justify:center",
-  div2: "flex items-center flex-col  self-start",
-  nav: "flex flex-row px-6 border-slate-200 ",
-  p: "flex justify-center items-center",
-  button1: "p-3",
-  button2: "p-3",
-  button3: "p-3",
-  p1: "px-14 m-3",
-  p2: "py-8",
-  p3: "p-14 m-3",
-  button4: "",
-  p4: " p-3 hidden",
-};
-
-// need to update elements loop with hiden
-function erase(object) {
+function erase(object, elements) {
   const empty = () => {
     return "";
   };
-  var newobj = {};
+  let obj = {};
   for (let value in object) {
-    newobj[value] = empty();
+    obj[value] = empty();
   }
-  return newobj;
+  obj[elements] = "hidden";
+  return obj;
 }
 
-var emptyObj = erase(obj);
-// console.log(emptyObj);
+const emptyObj = erase(pageCss);
 
-const setLauot = (obj) => {
-  let modiObj = obj;
-  Object.keys(modiObj).forEach((key, index) => {
-    modiObj[key] = layoutArr[index][0];
+const fill = (object) => {
+  let obj = object;
+  Object.keys(obj).forEach((key, index) => {
+    obj[key] = layoutArr[index];
   });
-  return modiObj;
+  return obj;
 };
 
-console.log(setLauot(emptyObj));
-
+console.log(fill(emptyObj, elements));
 console.log(erase(emptyObj));
+console.log(pageCss["button5"]);
 // console.log(obj);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Responzívny_web() {
-  const [layout, setLayout] = useState(false);
+  const [layout, setLayout] = useState(true);
   const [pageContent, setPageContent] = useState({
     p: "Moja navigácia",
     button1: "Tačidlo1",
@@ -11,22 +11,24 @@ function Responzívny_web() {
     p2: "Prvé čo potrebuje moja stránka je obsah (aký, taký tu už máme)",
     p3: "Layount --- Potrebujeme layout, tj. rozložení prvkov na stránke pri navrhovaní stránok. Architektúra stánky.",
     button4: "Layout",
-    p4: "Naša stránka má layout jej elementy sú na mieste, skúsme jej pridať trochu štýlu, footer - pätičku webu, a zopar animácií",
+    p4: "Naša stránka má layout jej elementy sú na mieste, skúsme jej pridať trochu štýlu, footer - pätičku webu, a zopar animácií.",
+    button5: "Responziv",
   });
 
   const [pageCss, setPageCss] = useState({
-    div1: "flex justify:center",
-    div2: "flex items-center flex-col  self-start",
-    nav: "flex flex-row px-6 border-slate-200 ",
-    p: "flex justify-center items-center",
-    button1: "p-3",
-    button2: "p-3",
-    button3: "p-3",
-    p1: "px-14 m-3",
-    p2: "py-8",
-    p3: "p-14 m-3",
+    div1: "",
+    div2: "",
+    nav: "",
+    p: "",
+    button1: "",
+    button2: "",
+    button3: "",
+    p1: "",
+    p2: "",
+    p3: "",
     button4: "",
-    p4: " p-3 hiden",
+    p4: " hidden",
+    button5: "hidden",
   });
 
   const layoutArr = [
@@ -42,9 +44,12 @@ function Responzívny_web() {
     ["p-14 m-3"],
     [""],
     [" p-3"],
+    ["btn m-3 w-24 "],
+    ["btn m-3 w-24"],
   ];
+  const elements = [["button5"], ["p4"]];
 
-  function erase(object, element) {
+  function erase(object, elements) {
     const empty = () => {
       return "";
     };
@@ -52,14 +57,15 @@ function Responzívny_web() {
     for (let value in object) {
       obj[value] = empty();
     }
-    obj[element] = "hidden";
+    obj[elements[1]] = "hidden";
+    obj[elements[0]] = "hidden";
     return obj;
   }
 
   const fill = (object) => {
     let obj = object;
     Object.keys(obj).forEach((key, index) => {
-      obj[key] = layoutArr[index][0];
+      obj[key] = layoutArr[index];
     });
     return obj;
   };
@@ -70,14 +76,13 @@ function Responzívny_web() {
 
     if (layout == false) {
       //clone
-      setPageCss(erase(pageCss, "p4"));
+      setPageCss(erase(pageCss, elements));
     } else if (layout == true) {
       setPageCss(fill(pageCss));
     }
   };
-  console.log(pageCss);
 
-  console.log(layout);
+  // handle boolean for respinziv
 
   return (
     <div className=" max-w-7xl mx-auto flex justify-center  ">
@@ -85,8 +90,6 @@ function Responzívny_web() {
         <div className="mockup-browser-toolbar">
           <div className="input text-info">https://mojaStranka.sk </div>
         </div>
-        {/* next div className  */}
-        {/* bg-base-200 flex justify-center px-4 py-16 */}
         <div className={`${pageCss.div1}`}>
           <div className={`${pageCss.div2}`}>
             <nav className={`${pageCss.nav}`}>
@@ -122,6 +125,10 @@ function Responzívny_web() {
               onClick={changeLayout}
             >{`${pageContent.button4}`}</button>
             <p className={`${pageCss.p4}`}>{`${pageContent.p4}`}</p>
+            <button
+              className={`${pageCss.button5}`}
+              onClick={changeResponziv}
+            >{`${pageContent.button5}`}</button>
           </div>
         </div>
       </div>
