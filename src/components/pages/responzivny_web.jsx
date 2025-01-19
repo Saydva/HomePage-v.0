@@ -26,7 +26,7 @@ function Responzívny_web() {
     p2: "py-8",
     p3: "p-14 m-3",
     button4: "",
-    p4: " p-3",
+    p4: " p-3 hiden",
   });
 
   const layoutArr = [
@@ -44,23 +44,24 @@ function Responzívny_web() {
     [" p-3"],
   ];
 
-  function erase(object) {
+  function erase(object, element) {
     const empty = () => {
       return "";
     };
-    var newobj = {};
+    let obj = {};
     for (let value in object) {
-      newobj[value] = empty();
+      obj[value] = empty();
     }
-    return newobj;
+    obj[element] = "hidden";
+    return obj;
   }
 
-  const fill = (obj) => {
-    let modiObj = obj;
-    Object.keys(modiObj).forEach((key, index) => {
-      modiObj[key] = layoutArr[index][0];
+  const fill = (object) => {
+    let obj = object;
+    Object.keys(obj).forEach((key, index) => {
+      obj[key] = layoutArr[index][0];
     });
-    return modiObj;
+    return obj;
   };
 
   //handle boolean
@@ -69,7 +70,7 @@ function Responzívny_web() {
 
     if (layout == false) {
       //clone
-      setPageCss(erase(pageCss));
+      setPageCss(erase(pageCss, "p4"));
     } else if (layout == true) {
       setPageCss(fill(pageCss));
     }
