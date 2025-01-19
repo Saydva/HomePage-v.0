@@ -46,21 +46,7 @@ const obj = {
   p4: " p-3 hidden",
 };
 
-const clone = {
-  div1: "",
-  div2: "",
-  nav: "",
-  p: "",
-  button1: "",
-  button2: "",
-  button3: "",
-  p1: "",
-  p2: "",
-  p3: "",
-  button4: "",
-  p4: "",
-};
-
+// need to update elements loop with hiden
 function erase(object) {
   const empty = () => {
     return "";
@@ -71,6 +57,9 @@ function erase(object) {
   }
   return newobj;
 }
+
+var emptyObj = erase(obj);
+// console.log(emptyObj);
 
 const setLauot = (obj) => {
   let modiObj = obj;
