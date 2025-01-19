@@ -8,7 +8,7 @@ function Home(props) {
   return (
     <div>
       <Hero switcher={switcher} />
-      <Color />
+      {/* <Color /> */}
       <Content switcher={switcher} />
     </div>
   );
