@@ -17,15 +17,19 @@ function Hero(props) {
           : "hero min-h-fit shadow-md shadow-slate-700 mx-auto"
       }
     >
-      <div className="hero-content flex-col lg:flex-row max-lg:text-center gap-x-8 ">
-        <img
-          src="../public/Photo.jpg"
-          className={`w-36 heroImg rounded-lg shadow-lg shadow-primary ${opacity}`}
-        />
+      <div className="hero-content flex-col md:flex-row max-md:text-center gap-x-8 ">
+        <div className="avatar">
+          <div className="ring-primary ring-offset-base-100 w-24 rounded-full ring ring-offset-2">
+            <img
+              src="../public/Photo.jpg"
+              className={` w-36 heroImg rounded-lg shadow-lg shadow-primary intersect:motion-preset-blur-up-lg motion-duration-1500 ${opacity}`}
+            />
+          </div>
+        </div>
         <div>
           <h1 className="text-3xl font-bold text-primary">Web na mieru !</h1>
           <div className="p-4">
-            <div className=" font-semibold text-xl mb-3">
+            <div className=" font-semibold text-xl mb-3 intersect:motion-preset-slide-up motion-delay-500">
               Web dizajn tak ako ho chceš ty !
             </div>
             Potrebujete stránku, ktorá bude prezentovať váš biznis ?
@@ -36,8 +40,8 @@ function Hero(props) {
             <div
               className={
                 switcher
-                  ? "text-accent font-semibold drop-shadow-lg text-xl my-3 border-solid bg-base-200 bg-opacity-10 p-2 rounded-lg"
-                  : "text-primary font-semibold shadow-slate-700 shadow-lg text-xl my-3 border-solid bg-opacity-45 bg-base-200 p-2 rounded-lg"
+                  ? "text-accent font-semibold drop-shadow-lg text-xl my-3 border-solid bg-base-200 bg-opacity-10 p-2 rounded-lg intersect:motion-preset-slide-up motion-delay-500"
+                  : "text-primary font-semibold shadow-slate-700 shadow-lg text-xl my-3 border-solid bg-opacity-45 bg-base-200 p-2 rounded-lg intersect:motion-preset-slide-up motion-delay-500"
               }
             >
               Technológie ako aj trendy na webe sa extrémne <br /> rýchlo menia

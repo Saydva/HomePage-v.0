@@ -8,28 +8,27 @@ function Navbar(props) {
     <div className="flex justify-between max-sm:flex-wrap max-sm:justify-end max-w-7xl mx-auto ">
       <div className="navbar gap-x-3 ">
         <Link to="/">
-          <div
-            href=""
-            className={`hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral rounded-lg p-2  text-slate-400 text-lg max-sm:text-sm active:scale-90 `}
-          >
+          <div className="intersect:motion-preset-fade-lg motion-delay-300 hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral rounded-lg p-2  text-slate-400 text-lg max-sm:text-sm active:scale-100">
             Domov
           </div>
         </Link>
         <Link to="/Responzívny_web">
-          <div className=" hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral text-slate-400 rounded-lg p-2 text-lg max-sm:text-sm active:scale-90">
+          <div className="intersect:motion-preset-fade-lg motion-delay-500 hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral text-slate-400 rounded-lg p-2 text-lg max-sm:text-sm active:scale-100">
             Responzívny web
           </div>
         </Link>
         <Link to="/O_mne">
-          <div className="hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral text-slate-400 rounded-lg p-2 text-lg max-sm:text-sm active:scale-90">
+          <div className="intersect:motion-preset-fade-lg motion-delay-700 hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral text-slate-400 rounded-lg p-2 text-lg max-sm:text-sm active:scale-100">
             O mne
           </div>
         </Link>
       </div>
       <div className="flex items-center gap-6 mx-3 ">
-        <div className="stat-value text-lg ">Téma</div>
+        <div className="stat-value text-lg intersect:motion-preset-fade-lg motion-delay-1000 ">
+          Téma
+        </div>
 
-        <label className="swap swap-rotate">
+        <label className="swap swap-rotate intersect:motion-preset-fade-lg motion-delay-1500">
           {/* this hidden checkbox controls the state */}
           <input
             type="checkbox"

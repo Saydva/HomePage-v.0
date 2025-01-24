@@ -56,7 +56,7 @@ function Responzívny_web() {
     ["btn m-3 w-24"],
   ];
   // css for responzive button
-  const responzivArr = [["flex"]];
+  const responzivArr = [["flex "]];
 
   // arr with elements have to bee hiden css if layout-boolean is false
   const elementsHidenDiv = [["divHiden"]];

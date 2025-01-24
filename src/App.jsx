@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import React, { useState } from "react";
+import ObserverProvider from "./components/utilities/ObserverProvider";
 
 import Home from "./components/pages/homePage";
 import O_mne from "./components/pages/o_mne";
@@ -33,14 +34,17 @@ function App() {
   }
   return (
     <>
-      <div data-theme={array[output]} className={` ${background}`}>
-        <Navbar changeTheme={changeTheme} />
-        <Routes>
-          <Route path="/" element={<Home switcher={switcher} />} />
-          <Route path="/Responzívny_web" element={<Responzívny_web />} />
-          <Route path="/O_mne" element={<O_mne />} />
-        </Routes>
-        <Footer />
+      {" "}
+      <div data-theme={array[output]} className={` ${background} `}>
+        <ObserverProvider>
+          <Navbar changeTheme={changeTheme} />
+          <Routes>
+            <Route path="/" element={<Home switcher={switcher} />} />
+            <Route path="/Responzívny_web" element={<Responzívny_web />} />
+            <Route path="/O_mne" element={<O_mne />} />
+          </Routes>
+          <Footer />
+        </ObserverProvider>
       </div>
     </>
   );

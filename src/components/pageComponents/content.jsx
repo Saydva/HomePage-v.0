@@ -17,7 +17,7 @@ function Content() {
       <div className=" flex flex-row gap-4 flex-wrap justify-center max-w-7xl">
         <div
           onClick={click}
-          className={` shadow-lg shadow-black rounded-lg hover:${animeScale} `}
+          className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale} `}
         >
           <div className="card bg-neutral text-neutral-content w-96">
             <div className="card-body items-center text-center rounded-md">
@@ -32,7 +32,7 @@ function Content() {
         </div>
         <div
           onClick={click}
-          className={` shadow-lg shadow-black rounded-lg hover:${animeScale}`}
+          className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
           <div className="card bg-neutral text-neutral-content w-96 ">
             <div className="card-body items-center text-center rounded-md">
@@ -46,7 +46,7 @@ function Content() {
         </div>
         <div
           onClick={click}
-          className={`shadow-lg shadow-black rounded-lg hover:${animeScale}`}
+          className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
           <div className="card bg-neutral text-neutral-content w-96">
             <div className="card-body items-center text-center  rounded-sm">
@@ -62,7 +62,7 @@ function Content() {
       <div>
         <div
           onClick={click}
-          className={`shadow-lg shadow-black rounded-lg hover:${animeScale}`}
+          className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
           <div className="card bg-neutral text-neutral-content w-full">
             <div className="card-body items-center text-center  rounded-sm">
@@ -76,7 +76,7 @@ function Content() {
       </div>
       <div
         onClick={click}
-        className={` shadow-lg shadow-black rounded-lg hover:${animeScale}`}
+        className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
       >
         <div className="card bg-neutral text-neutral-content w-96">
           <div className="card-body items-center text-center  rounded-lg">

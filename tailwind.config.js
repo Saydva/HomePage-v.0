@@ -8,6 +8,7 @@ export default {
     require("daisyui"),
     require("tailwindcss-animated"),
     require("tailwindcss-motion"),
+    require("tailwindcss-intersect"),
   ],
   daisyui: {
     themes: ["night", "nord"],
