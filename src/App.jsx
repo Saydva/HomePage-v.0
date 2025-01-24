@@ -38,13 +38,13 @@ function App() {
       <div data-theme={array[output]} className={` ${background} `}>
         <ObserverProvider>
           <Navbar changeTheme={changeTheme} />
-          <Routes>
-            <Route path="/" element={<Home switcher={switcher} />} />
-            <Route path="/Responzívny_web" element={<Responzívny_web />} />
-            <Route path="/O_mne" element={<O_mne />} />
-          </Routes>
-          <Footer />
         </ObserverProvider>
+        <Routes>
+          <Route path="/" element={<Home switcher={switcher} />} />
+          <Route path="/Responzívny_web" element={<Responzívny_web />} />
+          <Route path="/O_mne" element={<O_mne />} />
+        </Routes>
+        <Footer />
       </div>
     </>
   );
