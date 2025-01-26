@@ -6,7 +6,7 @@ function Navbar(props) {
 
   return (
     <>
-      <div className="flex justify-between max-sm:flex-wrap max-sm:justify-end max-w-7xl mx-auto max-sm:invisible max-sm:h-0">
+      <div className="flex justify-between max-sm:flex-wrap max-sm:justify-end max-w-7xl mx-auto max-sm:invisible max-sm:h-0 ">
         <div className="navbar gap-x-3 ">
           <Link to="/">
             <div className="intersect:motion-preset-fade-lg motion-delay-300 hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral rounded-lg p-2  text-slate-400 text-lg max-sm:text-sm active:scale-100">
@@ -20,7 +20,7 @@ function Navbar(props) {
           </Link>
           <Link to="/O_mne">
             <div className="intersect:motion-preset-fade-lg motion-delay-700 hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral text-slate-400 rounded-lg p-2 text-lg max-sm:text-sm active:scale-100">
-              O mne
+              Ako pracujem
             </div>
           </Link>
         </div>
@@ -99,7 +99,7 @@ function Navbar(props) {
               </Link>
               <Link to="/O_mne">
                 <div className="intersect:motion-preset-fade-lg motion-delay-700 hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral text-slate-400 rounded-lg p-2 text-lg max-sm:text-sm active:scale-100">
-                  O mne
+                  Ako pracujem
                 </div>
               </Link>
             </ul>

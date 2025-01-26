@@ -11,10 +11,10 @@ function Responzívny_web() {
     button2: "Tačidlo2",
     button3: "Tačidlo3",
     p1: "A tu niekde je moj content - teda obsah. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit blanditiis distinctio consequuntur in. Quia atque amet a minus deleniti. Aspernatur, labore? Quo accusamus, fugiat esse est nihil facere incidunt! Dicta.",
-    p2: "Prvé čo potrebuje moja stránka je obsah (aký, taký tu už máme)",
-    p3: "Layount --- Potrebujeme layout, tj. rozložení prvkov na stránke pri navrhovaní stránok. Architektúra stánky.",
+    p2: "Tu je další obsah - lorem  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deleniti provident consequuntur ducimus, sapiente quasi tenetur nemo quo molestiae? Provident praesentium incidunt labore natus molestias tenetur corrupti! Eligendi, tenetur fuga.",
+    p3: "Layount --- Potrebujeme štruktúru,  rozloženie elementov na stránke .",
     button4: "Layout",
-    p4: "Naša stránka má layout jej elementy sú na mieste, skúsme jej pridať trochu štýlu, a zopar animácií.",
+    p4: "Naša stránka má layout jej elementy sú na mieste, skúsme jej pridať trochu štýlu, a zopar animácií. Klikni na tlačidlo Responziv",
     button5: "Responziv",
   });
 
@@ -29,7 +29,7 @@ function Responzívny_web() {
     button3: "",
     p1: "",
     p2: "",
-    p3: "",
+    p3: "mb-4",
     p4: " hidden",
     button4: "btn m-3 w-24 ",
     button5: "hidden",
@@ -39,6 +39,7 @@ function Responzívny_web() {
   const [hiddenDiv, setHiddenDiv] = useState({
     divHiden: "hidden",
   });
+
   // css for layout button
   const layoutArr = [
     ["flex flex-col justify:center"],
@@ -226,7 +227,11 @@ function Responzívny_web() {
             <br />
             <p className={`${pageCss.p3}`}>{`${pageContent.p3}`}</p>
             <div className="animate-bounce w-6 h-6 fill-infoa">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="fill-info"
+              >
                 <g data-name="15.Arrow Down">
                   <path d="M12 24a12 12 0 1 1 12-12 12.013 12.013 0 0 1-12 12zm0-22a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2z" />
                   <path d="m12 18.414-4.707-4.707 1.414-1.414L12 15.586l3.293-3.293 1.414 1.414L12 18.414z" />
