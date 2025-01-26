@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ObserverProvider from "./components/utilities/ObserverProvider";
 
 import Home from "./components/pages/homePage";
-import O_mne from "./components/pages/o_mne";
+import Ako_pracujem from "./components/pages/Ako_pracujem";
 import Navbar from "./components/pageComponents/navbar";
 import Footer from "./components/pageComponents/footer";
 import Responzívny_web from "./components/pages/responzivny_web";
@@ -42,7 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home switcher={switcher} />} />
           <Route path="/Responzívny_web" element={<Responzívny_web />} />
-          <Route path="/O_mne" element={<O_mne />} />
+          <Route path="/Ako_pracujem" element={<Ako_pracujem />} />
         </Routes>
         <Footer />
       </div>

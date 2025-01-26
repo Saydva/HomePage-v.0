@@ -7,9 +7,9 @@ function Responzívny_web() {
   // const that holds content on page after load
   const [pageContent, setPageContent] = useState({
     p: "Moja navigácia",
-    button1: "Tačidlo1",
-    button2: "Tačidlo2",
-    button3: "Tačidlo3",
+    button1: "Tačidlo 1",
+    button2: "Tačidlo 2",
+    button3: "Tačidlo 3",
     p1: "A tu niekde je moj content - teda obsah. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit blanditiis distinctio consequuntur in. Quia atque amet a minus deleniti. Aspernatur, labore? Quo accusamus, fugiat esse est nihil facere incidunt! Dicta.",
     p2: "Tu je další obsah - lorem  Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deleniti provident consequuntur ducimus, sapiente quasi tenetur nemo quo molestiae? Provident praesentium incidunt labore natus molestias tenetur corrupti! Eligendi, tenetur fuga.",
     p3: "Layount --- Potrebujeme štruktúru,  rozloženie elementov na stránke .",
@@ -63,7 +63,7 @@ function Responzívny_web() {
   const elementsHidenDiv = [["divHiden"]];
 
   // arr with elements have to bee hiden if responzive- boolean is false
-  const elementsLayout = [["p4"], ["button4"], ["button5"]];
+  const elementsLayout = [["p4"], ["button4"], ["button5"], ["p3"]];
 
   // function thats remove css from layout
   function erase(object, elements) {
@@ -77,6 +77,7 @@ function Responzívny_web() {
     obj[elements[1]] = "btn m-3 w-24";
     obj[elements[0]] = "hidden";
     obj[elements[2]] = "hidden";
+    obj[elements[3]] = "mb-4";
     return obj;
   }
 
@@ -90,6 +91,7 @@ function Responzívny_web() {
       obj[value] = empty();
     }
     obj[elements[0]] = "hidden";
+    obj[elements];
 
     return obj;
   }
@@ -128,7 +130,7 @@ function Responzívny_web() {
       " btn bg-neutral text-slate-200 shadow-slate-300 shadow-md ml-3 motion-preset-fade motion-duration-2000 motion-preset-slide-down motion-duration-2000 ",
     ];
     pageCss.p1 += [
-      " mx-4 rounded-md bg-success opacity-65 my-5 text-slate-900 hover:motion-preset-oscillate motion-loop-once ",
+      " mx-4 rounded-md bg-error my-5 text-slate-900 hover:motion-preset-oscillate motion-loop-once ",
     ];
     pageCss.p2 += [
       " rounded-md border-slate-100 border-2 px-4 shadow-md shadow-slate-100 hover:motion-preset-oscillate motion-loop-once ",
@@ -163,7 +165,7 @@ function Responzívny_web() {
       ""
     );
     pageCss.p1 = pageCss.p1.replace(
-      " mx-4 rounded-md bg-success opacity-65 my-5 text-slate-900 hover:motion-preset-oscillate motion-loop-once ",
+      " mx-4 rounded-md bg-error my-5 text-slate-900 hover:motion-preset-oscillate motion-loop-once ",
       ""
     );
     pageCss.p2 = pageCss.p2.replace(
@@ -200,7 +202,13 @@ function Responzívny_web() {
 
   // return here all content with variables and states
   return (
-    <div className=" max-w-7xl mx-auto flex justify-center  ">
+    <div className=" max-w-7xl mx-auto flex justify-center flex-col items-center">
+      <div>
+        <p>
+          Malá ukážka toho ako funguje štruktúra a štýl webu ( vyskúšaj tlačidlá
+          nižšie Layout a Responziv ).
+        </p>
+      </div>
       <div className="mockup-browser bg-neutral border my-6">
         <div className="mockup-browser-toolbar">
           <div className="input text-info">https://mojaStranka.sk </div>

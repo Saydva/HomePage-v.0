@@ -20,12 +20,12 @@ function Content() {
           className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale} `}
         >
           <div className="card bg-neutral text-neutral-content w-96">
-            <div className="card-body items-center text-center rounded-md">
+            <div className="card-body items-center text-center rounded-md glass">
               <h2 className="card-title">Web l</h2>
               <p>
                 Moderný web <br />
                 1 - 2 podstránky <br />
-                od 299 €
+                od 199 €
               </p>
             </div>
           </div>
@@ -35,11 +35,11 @@ function Content() {
           className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
           <div className="card bg-neutral text-neutral-content w-96 ">
-            <div className="card-body items-center text-center rounded-md">
+            <div className="card-body items-center text-center rounded-md glass">
               <h2 className="card-title">Web ll</h2>
               <p>
                 Moderný web <br />
-                3 - 5 podstránok <br /> od 499 €
+                3 - 5 podstránok <br /> od 299 €
               </p>
             </div>
           </div>
@@ -49,7 +49,7 @@ function Content() {
           className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
           <div className="card bg-neutral text-neutral-content w-96">
-            <div className="card-body items-center text-center  rounded-sm">
+            <div className="card-body items-center text-center rounded-sm glass">
               <h2 className="card-title"> Webová aplikácia</h2>
               <p>
                 Interaktívna a funkčná webová aplikácia, ktorá je rýchla,
@@ -65,7 +65,7 @@ function Content() {
           className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
           <div className="card bg-neutral text-neutral-content w-full">
-            <div className="card-body items-center text-center  rounded-sm">
+            <div className="card-body items-center text-center rounded-sm">
               <p>
                 Môj web je interaktívny, funkčný a rýchly, hlavne bezpečný a
                 používateľsky prívetivý.
@@ -79,12 +79,11 @@ function Content() {
         className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
       >
         <div className="card bg-neutral text-neutral-content w-96">
-          <div className="card-body items-center text-center  rounded-lg">
+          <div className="card-body items-center text-center rounded-lg glass">
             <h2 className="card-title"> Redizajn</h2>
             <p>
-              {" "}
-              Kľudne mi napíšte aké sú vaše predstavy <br />
-              ,čo zmeniť alebo doplniť a pozrieme sa spolu na to! <br /> od 99 €
+              Kľudne mi napíšte aké sú vaše predstavy <br />, čo na vašom webe
+              zmeniť alebo doplniť a pozrieme sa spolu na to! <br /> od 99 €
             </p>
           </div>
         </div>
