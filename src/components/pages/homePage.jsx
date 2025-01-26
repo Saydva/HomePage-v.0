@@ -10,7 +10,7 @@ function Home(props) {
     <div>
       <ObserverProvider>
         <Hero switcher={switcher} />
-        {/* <Color /> */}
+        <Color />
         <Content switcher={switcher} />
       </ObserverProvider>
     </div>
