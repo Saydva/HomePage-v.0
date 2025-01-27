@@ -7,6 +7,7 @@ import Ako_pracujem from "./components/pages/Ako_pracujem";
 import Navbar from "./components/pageComponents/navbar";
 import Footer from "./components/pageComponents/footer";
 import Responzívny_web from "./components/pages/responzivny_web";
+import Bigger_screen from "./components/pageComponents/bigger_screen";
 // import "../public/notebook.jpg";
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
           <Route path="/" element={<Home switcher={switcher} />} />
           <Route path="/Responzívny_web" element={<Responzívny_web />} />
           <Route path="/Ako_pracujem" element={<Ako_pracujem />} />
+          <Route path="/BiggerScreen" element={<Bigger_screen />} />
         </Routes>
         <Footer />
       </div>

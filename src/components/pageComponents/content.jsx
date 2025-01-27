@@ -19,7 +19,7 @@ function Content() {
           onClick={click}
           className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale} `}
         >
-          <div className="card bg-neutral text-neutral-content w-96">
+          <div className="card bg-neutral text-neutral-content w-96 max-sm:w-72">
             <div className="card-body items-center text-center rounded-md glass">
               <h2 className="card-title">Web l</h2>
               <p>
@@ -34,7 +34,7 @@ function Content() {
           onClick={click}
           className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
-          <div className="card bg-neutral text-neutral-content w-96 ">
+          <div className="card bg-neutral text-neutral-content w-96 max-sm:w-72">
             <div className="card-body items-center text-center rounded-md glass">
               <h2 className="card-title">Web ll</h2>
               <p>
@@ -48,7 +48,7 @@ function Content() {
           onClick={click}
           className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
-          <div className="card bg-neutral text-neutral-content w-96">
+          <div className="card bg-neutral text-neutral-content w-96 max-sm:w-72">
             <div className="card-body items-center text-center rounded-sm glass">
               <h2 className="card-title"> Webová aplikácia</h2>
               <p>
@@ -64,7 +64,7 @@ function Content() {
           onClick={click}
           className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
         >
-          <div className="card bg-neutral text-neutral-content w-full">
+          <div className="card bg-neutral text-neutral-content w-auto">
             <div className="card-body items-center text-center rounded-sm">
               <p>
                 Môj web je interaktívny, funkčný a rýchly, hlavne bezpečný a
@@ -78,7 +78,7 @@ function Content() {
         onClick={click}
         className={`intersect:motion-preset-slide-left-lg motion-delay-500 shadow-lg shadow-black rounded-lg hover:${animeScale}`}
       >
-        <div className="card bg-neutral text-neutral-content w-96">
+        <div className="card bg-neutral text-neutral-content w-96 max-sm:w-72">
           <div className="card-body items-center text-center rounded-lg glass">
             <h2 className="card-title"> Redizajn</h2>
             <p>

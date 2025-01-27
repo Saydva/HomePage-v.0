@@ -202,7 +202,7 @@ function Responzívny_web() {
 
   // return here all content with variables and states
   return (
-    <div className=" max-w-7xl mx-auto flex justify-center flex-col items-center">
+    <div className=" max-w-7xl mx-auto flex justify-center flex-col items-center w-auto">
       <div>
         <p>
           Malá ukážka toho ako funguje štruktúra a štýl webu ( vyskúšaj tlačidlá
@@ -210,7 +210,7 @@ function Responzívny_web() {
         </p>
       </div>
       <div className="mockup-browser bg-neutral border my-6">
-        <div className="mockup-browser-toolbar">
+        <div className="mockup-browser-toolbar w-auto">
           <div className="input text-info">https://mojaStranka.sk </div>
         </div>
         <div className={`${pageCss.div1}`}>
@@ -234,7 +234,7 @@ function Responzívny_web() {
             <p className={`${pageCss.p2}`}>{`${pageContent.p2}`}</p>
             <br />
             <p className={`${pageCss.p3}`}>{`${pageContent.p3}`}</p>
-            <div className="animate-bounce w-6 h-6 fill-infoa">
+            <div className="animate-bounce w-6 h-6 fill-info">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

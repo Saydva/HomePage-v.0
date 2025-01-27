@@ -94,12 +94,12 @@ function Navbar(props) {
                 </div>
               </Link>
 
-              <Link to="/O_mne">
+              <Link to="/Ako_pracujem">
                 <div className="intersect:motion-preset-fade-lg motion-delay-500 hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral text-slate-400 rounded-lg p-2 text-lg max-sm:text-sm active:scale-100">
                   Ako pracujem
                 </div>
               </Link>
-              <Link to="/Responzívny_web">
+              <Link to="/BiggerScreen">
                 <div className="intersect:motion-preset-fade-lg motion-delay-700 hover:scale-105 hover:translate-y-0.4 duration-100 shadow-md shadow-secondary bg-neutral text-slate-400 rounded-lg p-2 text-lg max-sm:text-sm active:scale-100">
                   Responzívny web
                 </div>
